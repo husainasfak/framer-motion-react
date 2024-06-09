@@ -13,6 +13,12 @@ const containerVariants = {
                type: 'spring',
                delay: 0.5
           }
+     },
+     exit: {
+          y: '-100vh',
+          transition: {
+               ease: 'easeInOut'
+          }
      }
 }
 const Base = ({ addBase, pizza }) => {
@@ -25,6 +31,7 @@ const Base = ({ addBase, pizza }) => {
                variants={containerVariants}
                initial="hidden"
                animate="visible"
+               exit={'exit'}
           // transition={{ type: 'spring', delay: 0.5 }}
           >
 
